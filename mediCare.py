@@ -68,12 +68,12 @@ def main():
             source_documents = response["source_documents"]
 
             # Prepare formatted source documents
-            sources_text = "#### 📚 Source Documents:\n"
-            for i, doc in enumerate(source_documents):
-                sources_text += f"**Source {i+1}:**\n```\n{doc.page_content.strip()}\n```\n\n"
+            # sources_text = "#### 📚 Source Documents:\n"
+            # for i, doc in enumerate(source_documents):
+            #     sources_text += f"**Source {i+1}:**\n```\n{doc.page_content.strip()}\n```\n\n"
 
             # Final result to show
-            result_to_show = f"### 🩺 Answer:\n{result}\n\n{sources_text}"
+            result_to_show = f"### 🩺 Answer:\n{result}"
 
             # Display in Streamlit chat
             st.chat_message('assistant').markdown(result_to_show)
